@@ -5,84 +5,78 @@
 	<title>Games</title>
 </head>
 <body>
-		<h1>Крестики нолики</h1>
-		<br>
-		<hr>
+	<h1>Крестики нолики</h1>
+	<br>
+	<hr>
 	<br>
 	<div id="game"></div>
-<br><br>
-      
-<input type="button" id="button" value="Clear" onClick="window.location.reload()">
+	<br><br>
+
+	<input type="button" id="button" value="Clear" onClick="window.location.reload()">
 
 	<style type="text/css">
-		
-		body{
-			background-color: #f2f2f2;
-		}
 
-		body h1{
-			font-size:800;
-			margin: 0 auto;
-			text-align: center;
+	body{
+		background-color: #f2f2f2;
+	}
 
-		}
+	body h1{
+		font-size:800;
+		margin: 0 auto;
+		text-align: center;
 
-		#game{
+	}
 
-			width: 450px;
-			height: 450px;
-			background-color: #f85c37;
-			margin: 0 auto;
-		}
+	#game{
 
-
-
-		
-		.block{
-			width: 150px;
-			height: 150px;
-			float: left;
-			border:1px solid white;
-			box-sizing: border-box;
-			font-size: 80px;
-			text-align: center;
-			font-weight:800;
-			text-transform: uppercase;
-			cursor:pointer;
-			position: relative;
-			background-color:#f85c37;
-		}
-		
+		width: 450px;
+		height: 450px;
+		background-color: #f85c37;
+		margin: 0 auto;
+	}
 
 
 
-		#button{
-			display: block;
-			margin: 0 auto;
-			width: 100px;
-			border-radius: 20px;
-			padding:10px 20px;
-			background-color: f2f2f2;
-			cursor: pointer;
 
-		}	
+	.block{
+		width: 150px;
+		height: 150px;
+		float: left;
+		border:1px solid white;
+		box-sizing: border-box;
+		font-size: 80px;
+		text-align: center;
+		font-weight:800;
+		text-transform: uppercase;
+		cursor:pointer;
+		position: relative;
+		background-color:#f85c37;
+	}
 
-	</style>
-	
 
 
-	<script type="text/javascript">
 
-		var name=prompt('Введите ваше имя: ');
-		
-		alert('Здарствуйте, '+ name + '. ' + ' Это моя первая игра "Крестики нолики." Приятной игры:))))'); 
+	#button{
+		display: block;
+		margin: 0 auto;
+		width: 100px;
+		border-radius: 20px;
+		padding:10px 20px;
+		background-color: f2f2f2;
+		cursor: pointer;
 
-		window.onload = function(){
-				
-		
+	}	
+
+</style>
+
+
+
+<script type="text/javascript">
+
+	window.onload = function(){
 
 		for (var i = 0; i < 9; i++) {
-		document.getElementById('game').innerHTML+='<div class="block" ></div>';
+			document.getElementById('game').innerHTML+='<div class="block" ></div>';
 		}
 
 		var hod = 0;
@@ -102,35 +96,35 @@
 		}
 
 
-      function checkWinner() {
-      	var allblock = document.getElementsByClassName('block');
+		function checkWinner() {
+			var allblock = document.getElementsByClassName('block');
       	//console.log(allblock);
-  		if (allblock[0].innerHTML=='x' && allblock[1].innerHTML=='x' && allblock[2].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
-  		if (allblock[3].innerHTML=='x' && allblock[4].innerHTML=='x' && allblock[5].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
-  		if (allblock[6].innerHTML=='x' && allblock[7].innerHTML=='x' && allblock[8].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")	
-      	if (allblock[0].innerHTML=='x' && allblock[3].innerHTML=='x' && allblock[6].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
-      	if (allblock[1].innerHTML=='x' && allblock[4].innerHTML=='x' && allblock[7].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
-      	if (allblock[2].innerHTML=='x' && allblock[5].innerHTML=='x' && allblock[8].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")		
-		if (allblock[0].innerHTML=='x' && allblock[4].innerHTML=='x' && allblock[8].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
-		if (allblock[2].innerHTML=='x' && allblock[4].innerHTML=='x' && allblock[6].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
-		
-		if (allblock[0].innerHTML=='0' && allblock[1].innerHTML=='0' && allblock[2].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
-  		if (allblock[3].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[5].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
-  		if (allblock[6].innerHTML=='0' && allblock[7].innerHTML=='0' && allblock[8].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
-      	if (allblock[0].innerHTML=='0' && allblock[3].innerHTML=='0' && allblock[6].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
-      	if (allblock[1].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[7].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
-      	if (allblock[2].innerHTML=='0' && allblock[5].innerHTML=='0' && allblock[8].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
-		if (allblock[0].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[8].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
-		if (allblock[2].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[6].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
-		}
-     
+      	if (allblock[0].innerHTML=='x' && allblock[1].innerHTML=='x' && allblock[2].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
+      		if (allblock[3].innerHTML=='x' && allblock[4].innerHTML=='x' && allblock[5].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
+      			if (allblock[6].innerHTML=='x' && allblock[7].innerHTML=='x' && allblock[8].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")	
+      				if (allblock[0].innerHTML=='x' && allblock[3].innerHTML=='x' && allblock[6].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
+      					if (allblock[1].innerHTML=='x' && allblock[4].innerHTML=='x' && allblock[7].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
+      						if (allblock[2].innerHTML=='x' && allblock[5].innerHTML=='x' && allblock[8].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")		
+      							if (allblock[0].innerHTML=='x' && allblock[4].innerHTML=='x' && allblock[8].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
+      								if (allblock[2].innerHTML=='x' && allblock[4].innerHTML=='x' && allblock[6].innerHTML=='x') alert("Поздравляю, победу одержали крестики!!!")
 
-
-     }
-
-	</script>
+      									if (allblock[0].innerHTML=='0' && allblock[1].innerHTML=='0' && allblock[2].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
+      										if (allblock[3].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[5].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
+      											if (allblock[6].innerHTML=='0' && allblock[7].innerHTML=='0' && allblock[8].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
+      												if (allblock[0].innerHTML=='0' && allblock[3].innerHTML=='0' && allblock[6].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
+      													if (allblock[1].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[7].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
+      														if (allblock[2].innerHTML=='0' && allblock[5].innerHTML=='0' && allblock[8].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
+      															if (allblock[0].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[8].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
+      																if (allblock[2].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[6].innerHTML=='0') alert("Поздравляю, победу одержали нолики!!!")
+      															}
 
 
 
-</body>
-</html>
+      													}
+
+      												</script>
+
+
+
+      											</body>
+      											</html>
